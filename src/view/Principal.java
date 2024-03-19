@@ -16,6 +16,7 @@ public class Principal {
 				"1 - Imprimir o TID de 5 Threads.\n" +
 				"2 - Imprimir a somatória de uma linha de uma matriz aleatória.\n" +
 				"3 - Imprimir o tempo para For e/ou Foreach.\n" +
+				"4 - Corrida de sapos.\n" +
 				"9 - Sair."));
 			
 			switch (opc) {
@@ -72,6 +73,18 @@ public class Principal {
 						numAleatorio = (int)(Math.random()*100) + 1;
 						Thread threadVetor = new ThreadVetor(numAleatorio, vetor2);
 						threadVetor.start();
+						
+					}
+					break;
+					
+				case 4:
+					
+					int distancia = Integer.parseInt(JOptionPane.showInputDialog("Digite a distância da pista de corrida em metros."));
+					
+					for (int sapoThread = 0; sapoThread < 5; sapoThread++) {
+						
+						Thread threadSapo = new ThreadSapo(sapoThread, distancia);
+						threadSapo.start();
 						
 					}
 					break;
