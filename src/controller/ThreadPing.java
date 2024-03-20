@@ -8,14 +8,13 @@ import java.io.InputStreamReader;
 public class ThreadPing extends Thread{
 	
 	private int pingThread;
-	private static int contador = 1;
+	private int contador;
 	
-	public ThreadPing(int pingThread) {
+	public ThreadPing(int pingThread, int contador) {
 		
 		this.pingThread = pingThread;
-		
-	}
-	
+		this.contador = contador;
+
 	@Override
 	public void run() {
 		
@@ -44,6 +43,9 @@ public class ThreadPing extends Thread{
 						linha = buffer.readLine();
 						
 					}
+					
+					contador++;
+					
 					
 				} catch (IOException e) {
 					
@@ -74,11 +76,14 @@ public class ThreadPing extends Thread{
 						
 					}
 					
+					contador++;
+					
 				} catch (IOException e) {
 					
 					e.printStackTrace();
 					
 				}
+			
 				
 			} else {
 				
