@@ -27,8 +27,6 @@ public class ThreadSapo extends Thread {
 			
 		}
 		
-		
-		
 	}
 	
 }

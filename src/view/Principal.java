@@ -17,6 +17,7 @@ public class Principal {
 				"2 - Imprimir a somatória de uma linha de uma matriz aleatória.\n" +
 				"3 - Imprimir o tempo para For e/ou Foreach.\n" +
 				"4 - Corrida de sapos.\n" +
+				"5 - Imprimir 3 pings com 3 Threads diferentes.\n" +
 				"9 - Sair."));
 			
 			switch (opc) {
@@ -85,6 +86,16 @@ public class Principal {
 						
 						Thread threadSapo = new ThreadSapo(sapoThread, distancia);
 						threadSapo.start();
+						
+					}
+					break;
+					
+				case 5:
+					
+					for (int pingThread = 0; pingThread < 3; pingThread++) {
+						
+						Thread threadPing = new ThreadPing(pingThread);
+						threadPing.start();
 						
 					}
 					break;
