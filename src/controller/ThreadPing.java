@@ -62,9 +62,12 @@ public class ThreadPing extends Thread{
 					
 					double tempoInicial = System.nanoTime();
 					
+					linha = buffer.readLine();
+					
 					while (linha != null) {
 						
 						System.out.println(linha);
+						linha = buffer.readLine();
 						
 					}
 					
