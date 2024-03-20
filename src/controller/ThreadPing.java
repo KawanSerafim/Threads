@@ -14,6 +14,8 @@ public class ThreadPing extends Thread{
 		
 		this.pingThread = pingThread;
 		this.contador = contador;
+	
+	}
 
 	@Override
 	public void run() {
@@ -44,8 +46,6 @@ public class ThreadPing extends Thread{
 						
 					}
 					
-					contador++;
-					
 					
 				} catch (IOException e) {
 					
@@ -75,8 +75,6 @@ public class ThreadPing extends Thread{
 						linha = buffer.readLine();
 						
 					}
-					
-					contador++;
 					
 				} catch (IOException e) {
 					
