@@ -38,12 +38,16 @@ public class ThreadPing extends Thread{
 					
 					linha = buffer.readLine();
 					
+					System.out.println("==================\n\n PING GOOGLE");
+					
 					while (linha != null) {
 						
 						System.out.println(linha);
 						linha = buffer.readLine();
 						
 					}
+					
+					System.out.println("\n==================");
 					
 				} catch (IOException e) {
 					
@@ -67,12 +71,16 @@ public class ThreadPing extends Thread{
 					
 					linha = buffer.readLine();
 					
+					System.out.println("==================\n\n PING GOOGLE");
+					
 					while (linha != null) {
 						
 						System.out.println(linha);
 						linha = buffer.readLine();
 						
 					}
+					
+					System.out.println("\n==================");
 					
 				} catch (IOException e) {
 					
@@ -95,12 +103,16 @@ public class ThreadPing extends Thread{
 					
 					linha = buffer.readLine();
 					
+					System.out.println("==================\n\n PING GOOGLE");
+					
 					while (linha != null) {
 						
 						System.out.println(linha);
 						linha = buffer.readLine();
 						
-					}	
+					}
+					
+					System.out.println("\n==================");
 					
 				} catch (IOException e) {
 					
