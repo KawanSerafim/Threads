@@ -92,10 +92,13 @@ public class Principal {
 					
 				case 5:
 					
+					int contador = 1;
+					
 					for (int pingThread = 0; pingThread < 3; pingThread++) {
 						
-						Thread threadPing = new ThreadPing(pingThread);
+						Thread threadPing = new ThreadPing(pingThread, contador);
 						threadPing.start();
+						contador++;
 						
 					}
 					break;
