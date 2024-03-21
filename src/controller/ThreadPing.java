@@ -34,21 +34,22 @@ public class ThreadPing extends Thread{
 					BufferedReader buffer = new BufferedReader(leitor);
 					
 					String linha = "";
-					
-					double tempoInicial = System.nanoTime();
-					
 					linha = buffer.readLine();
-					
-					System.out.println("==================\n\n PING GOOGLE");
+					String split[];
 					
 					while (linha != null) {
 						
-						System.out.println(linha);
+						if (linha.contains("time=")) {
+							
+							split = linha.split("time=");
+							
+							System.out.println("TID: " + getId() + " - Serivdor: Google - Tempo = " + split[1]);
+							
+						}
+						
 						linha = buffer.readLine();
 						
 					}
-					
-					System.out.println("\n==================");
 					
 				} catch (IOException e) {
 					
@@ -67,21 +68,22 @@ public class ThreadPing extends Thread{
 					BufferedReader buffer = new BufferedReader(leitor);
 					
 					String linha = "";
-					
-					double tempoInicial = System.nanoTime();
-					
 					linha = buffer.readLine();
-					
-					System.out.println("==================\n\n PING GOOGLE");
+					String split[];
 					
 					while (linha != null) {
 						
-						System.out.println(linha);
+						if (linha.contains("time=")) {
+							
+							split = linha.split("time=");
+							
+							System.out.println("TID: " + getId() + " - Serivdor: UOL    - Tempo = " + split[1]);
+							
+						}
+						
 						linha = buffer.readLine();
 						
 					}
-					
-					System.out.println("\n==================");
 					
 				} catch (IOException e) {
 					
@@ -100,21 +102,22 @@ public class ThreadPing extends Thread{
 					BufferedReader buffer = new BufferedReader(leitor);
 					
 					String linha = "";
-					
-					double tempoInicial = System.nanoTime();
-					
 					linha = buffer.readLine();
-					
-					System.out.println("==================\n\n PING GOOGLE");
+					String split[];
 					
 					while (linha != null) {
 						
-						System.out.println(linha);
+						if (linha.contains("time=")) {
+							
+							split = linha.split("time=");
+							
+							System.out.println("TID: " + getId() + " - Serivdor: Terra  - Tempo = " + split[1]);
+							
+						}
+						
 						linha = buffer.readLine();
 						
 					}
-					
-					System.out.println("\n==================");
 					
 				} catch (IOException e) {
 					
