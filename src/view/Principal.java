@@ -1,7 +1,14 @@
 package view;
 
+import java.util.concurrent.Semaphore;
+
 import javax.swing.JOptionPane;
-import controller.*;
+
+import controller.ThreadMatriz;
+import controller.ThreadPing;
+import controller.ThreadSapo;
+import controller.ThreadTID;
+import controller.ThreadVetor;
 
 public class Principal {
 
@@ -81,10 +88,11 @@ public class Principal {
 				case 4:
 					
 					int distancia = Integer.parseInt(JOptionPane.showInputDialog("Digite a distância da pista de corrida em metros."));
+					Semaphore semaforo = new Semaphore(1);
 					
 					for (int sapoThread = 0; sapoThread < 5; sapoThread++) {
 						
-						Thread threadSapo = new ThreadSapo(sapoThread, distancia);
+						Thread threadSapo = new ThreadSapo(sapoThread, distancia, semaforo);
 						threadSapo.start();
 						
 					}
