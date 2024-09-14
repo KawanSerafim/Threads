@@ -16,6 +16,7 @@ public class Principal {
 						"[Threads - Sistemas Operacionais 1]\n\n" +
 						"1 - Exibir o TID de 5 threads.\n" +
 						"2 - Exibir a somatória de cada linha de uma matriz.\n" +
+						"3 - Exibir o tempo que uma thread percorre um vetor.\n" +
 						"0 - Sair."));
 				
 				switch(opc) {
@@ -30,6 +31,12 @@ public class Principal {
 						
 						Matriz matriz = new Matriz();
 						matriz.chamarThread();
+						break;
+						
+					case 3:
+						
+						Vetor vetor = new Vetor();
+						vetor.chamarThread();
 						break;
 						
 					case 0:
