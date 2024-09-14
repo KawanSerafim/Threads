@@ -15,6 +15,7 @@ public class Principal {
 				opc = Integer.parseInt(JOptionPane.showInputDialog(
 						"[Threads - Sistemas Operacionais 1]\n\n" +
 						"1 - Exibir o TID de 5 threads.\n" +
+						"2 - Exibir a somatória de cada linha de uma matriz.\n" +
 						"0 - Sair."));
 				
 				switch(opc) {
@@ -23,6 +24,12 @@ public class Principal {
 						
 						Tid tid = new Tid();
 						tid.chamarThreads();
+						break;
+						
+					case 2:
+						
+						Matriz matriz = new Matriz();
+						matriz.chamarThread();
 						break;
 						
 					case 0:
