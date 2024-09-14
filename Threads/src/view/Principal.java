@@ -17,6 +17,7 @@ public class Principal {
 						"1 - Exibir o TID de 5 threads.\n" +
 						"2 - Exibir a somatória de cada linha de uma matriz.\n" +
 						"3 - Exibir o tempo que uma thread percorre um vetor.\n" +
+						"4 - Corrida de sapos.\n" +
 						"0 - Sair."));
 				
 				switch(opc) {
@@ -37,6 +38,12 @@ public class Principal {
 						
 						Vetor vetor = new Vetor();
 						vetor.chamarThread();
+						break;
+						
+					case 4:
+						
+						Sapo sapo = new Sapo();
+						sapo.chamarThread();
 						break;
 						
 					case 0:
